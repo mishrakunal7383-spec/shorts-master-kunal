@@ -1,0 +1,6 @@
+flask
+moviepy
+opencv-python
+numpy
+ffmpeg-python
+openai-whisper
