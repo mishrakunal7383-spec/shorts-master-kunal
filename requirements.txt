@@ -1,6 +1,6 @@
-flask
+Flask
 moviepy
-opencv-python
+imageio
+imageio-ffmpeg
 numpy
-ffmpeg-python
-openai-whisper
+pydub
