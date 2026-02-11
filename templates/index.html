@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shorts Master Kunal</title>
+<style>
+body{
+background:#111;
+color:white;
+text-align:center;
+font-family:sans-serif;
+padding:40px
+}
+button{
+padding:10px 20px;
+background:#00ff88;
+border:none;
+cursor:pointer
+}
+video{
+width:250px;
+margin:10px
+}
+</style>
+</head>
+
+<body>
+
+<h1>🔥 Shorts Master Kunal</h1>
+
+<form action="/generate" method="post" enctype="multipart/form-data">
+<input type="file" name="video" required><br><br>
+
+<select name="duration">
+<option value="30">30 sec</option>
+<option value="45">45 sec</option>
+<option value="60">60 sec</option>
+</select>
+
+<select name="count">
+<option value="1">1 short</option>
+<option value="2">2 shorts</option>
+<option value="3">3 shorts</option>
+<option value="4">4 shorts</option>
+<option value="5">5 shorts</option>
+</select>
+
+<br><br>
+<button>Generate Shorts</button>
+</form>
+
+{% if videos %}
+<h2>Download Your Shorts</h2>
+{% for v in videos %}
+<video controls src="{{v}}"></video>
+<br>
+<a href="/download/{{v}}">Download</a>
+{% endfor %}
+{% endif %}
+
+</body>
+  </html>
